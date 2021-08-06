@@ -1,0 +1,19 @@
+<main>
+    <div class="container mt-3">
+        <div class="d-flex justify-content-end mb-5">
+            <button class="btn btn-success btn-lg" routerLink="./newAuthor">Add an author</button>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4 animate__animated animate__bounceIn" *ngIf="authors.length>0 else noAuthors">
+            <div class="col" *ngFor="let author of authors">
+                <app-author-card (deleteAuthorOut)="removeAuthor($event)" [author]="author"></app-author-card>
+            </div>
+        </div>
+        <ng-template #noAuthors>
+            <div>
+                <p class="alert alert-primary animate__animated animate__shakeX">There's no authors :(</p>
+            </div>
+        </ng-template>
+    </div>
+</main>
+
+

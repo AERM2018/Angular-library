@@ -1,0 +1,13 @@
+
+.author-bio{
+    white-space: wrap;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    max-height : 100px;
+}
+
+.author-card-img img{
+    height: 160px
+    /* max-height : 100%; */
+}

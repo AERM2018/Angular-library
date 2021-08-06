@@ -1,0 +1,17 @@
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4 author-card-img">
+        <img src="https://nestjs-server-aerm.herokuapp.com/{{author.profilePic}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"><span class="text-muted">Name: </span>{{author.fullname}}</h5>
+          <p class="card-text"><span class="text-muted">Birthdate: </span> {{author.birthdate}}</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-outline-danger me-md-2" type="button" (click)="deleteAuthorById(author.id)">Delete</button>
+            <a class="btn btn-primary me-md-2" type="button" routerLink="/authors/{{author.id}}">See more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,17 @@
+<main>
+    <div class="container mt-3">
+        <div class="book-options d-flex justify-content-end mb-5">
+            <a class="btn btn-success btn-lg" routerLink="./newBook">Add book</a>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4 animate__animated animate__bounceIn" *ngIf="books.length>0 else noBooks">
+            <div class="col" *ngFor="let book of books">
+                <app-book-card (deleteBookOut)="removeBook($event)" [book]="book"></app-book-card>
+            </div>
+        </div>
+        <ng-template #noBooks>
+            <div>
+                <p class="alert alert-primary animate__animated animate__shakeX">There's no books :(</p>
+            </div>
+        </ng-template>
+    </div>
+</main>

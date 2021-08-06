@@ -1,0 +1,22 @@
+<main>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col d-grid gap-3 d-md-flex justify-content-md-end mb-5">
+                <a class="btn btn-primary btn-lg" routerLink='./update'>Edit</a>
+                <a class="btn btn-outline-danger btn-lg" (click)="deleteBook(book.id)">Delete</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 animate__animated animate__fadeInLeft d-flex justify-content-center">
+                <img src="https://nestjs-server-aerm.herokuapp.com/{{book.cover}}" alt="">
+            </div>
+            <div class="col-6 animate__animated animate__fadeInRight">
+                <h3>Title: {{book.title}}</h3>
+                <p>ISBN: {{book.ISBN}}</p>
+                <p>Author: {{book.author.firstName}} {{book.author.secondName}} {{book.author.surname}}</p>
+                <p>Number of Pages: {{book.numPages}}</p>
+                <p>Description: {{book.description}}</p>
+            </div>
+        </div>
+    </div>
+</main>

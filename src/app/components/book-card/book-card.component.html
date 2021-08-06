@@ -1,0 +1,19 @@
+<div class="card mb-3" style="max-width: 540px;">
+  
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://nestjs-server-aerm.herokuapp.com/{{book.cover}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"><span class="text-muted">Title:</span> {{book.title}}</h5>
+          <p class="card-text"><span class="text-muted">Author: </span> {{book.author.firstName}} {{book.author.secondName}} {{book.author.surname}}</p>
+          <p class="card-text"><span class="text-muted">ISBN: </span> {{book.ISBN}}</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-outline-danger me-md-2" type="button" (click)="deleteBook(book.id)">Delete</button>
+            <button class="btn btn-primary" routerLink="./{{book.id}}" >See more</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
